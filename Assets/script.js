@@ -1,3 +1,4 @@
+// global variables 
 var apiKey = "b0f2ba24b4056628245477ece42c3207";
 var button = document.getElementById("btn");
 var search = document.getElementById("cityName");
@@ -6,6 +7,7 @@ var card2Results = document.getElementById("card2");
 var card3Results = document.getElementById("card3");
 var card4Results = document.getElementById("card4");
 var card5Results = document.getElementById("card5");
+// this variable checks the input the user puts into the search bar 
 var searchArea = function(event){
  event.preventDefault();   
     var citySearch =search.value.trim();
@@ -18,7 +20,7 @@ var searchArea = function(event){
 
     
 }
-
+// fetches the API call 
 function cityName(citySearch){
     var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch  + '&units=imperial' +"&appid=b0f2ba24b4056628245477ece42c3207";
 
@@ -26,7 +28,7 @@ function cityName(citySearch){
     .then(function(response) {
         return response.json();
     })
-
+//grabs the params from the object and applies them to variables that are then appened into the HTML
     .then(function (data) {
         console.log(data);
         //for(i=0; i<4; i+8) {
@@ -161,6 +163,6 @@ function cityName(citySearch){
     
 
    
-
+// starts the function when the button is clicked 
 button.addEventListener("click", searchArea);
 

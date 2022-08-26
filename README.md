@@ -13,3 +13,6 @@ The user can then enter a new city into the input field and receive the 5 day fo
 
 # Link to Application
 https://nickmason01.github.io/Weather-App/
+
+![image](https://user-images.githubusercontent.com/108901623/186803688-4d5b1f9a-8363-483e-8ff4-a6966795ee1c.png)
+
